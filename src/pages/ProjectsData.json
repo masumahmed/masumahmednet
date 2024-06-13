@@ -1,0 +1,42 @@
+[
+    {
+        "img": "assets/img/Screen Shot 2022-09-04 at 9.15.35 PM.png",
+        "alt": "screenshot of text editor and terminal",
+        "title": "FAT32 File System",
+        "description": "In this project I implemented a functional FAT32 file system using a text file in place of an actual storage device. It demonstrates understading of high level computer science topics in operating systems and file systems.",
+        "title2": "Example MLK.txt",
+        "description2": "The system is able to store any 20Kb text file within it's volume. In the example screenshot I used MLK's famous I had a dream speech. In the FAT (left) you can see the file being allocated. In the volume (right) you can see a subsection of the file's content being stored using the index allocation method for file management.",
+        "repoLink": "https://github.com/masumahmed/filesystem",
+        "repoText": "github/masumahmed/filesystem"
+    },
+    {
+        "img": "assets/img/Screenshot 2023-01-22 at 2.17.19 AM.png",
+        "alt": "screenshot of the website",
+        "title": "Link Locker",
+        "description": "A website that encodes and decodes URLs with a given password. This application works by using a two way hash algorithm to encode and decode the link.",
+        "videoLink": "https://youtu.be/iMSPQ5wabFM",
+        "videoText": "https://youtu.be/SxkksvAsUzM",
+        "repoLink": "https://github.com/masumahmed/link-locker",
+        "repoText": "github/masumahmed/link-locker"
+    },
+    {
+        "img": "assets/img/Screen Shot 2022-10-15 at 5.05.21 PM.png",
+        "alt": "screenshot of the website",
+        "title": "Windows 95 Web UI",
+        "description": "A frontend project aimed at recreating the iconic Windows 95 user interface. Features a smei-functional Windows start menu, clock and functional windowing system.",
+        "repoLink": "https://replit.com/@masum-ahmed/Windows95UI#index.html",
+        "repoText": "replit.com/@masum-ahmed/Windows95UI",
+        "liveLink": "https://windows95ui.masum-ahmed.repl.co/",
+        "liveText": "windows95ui.masum-ahmed.repl.co"
+    },
+    {
+        "img": "assets/img/hhcwebsite.png",
+        "alt": "screenshot of the website",
+        "title": "Hunted Hero Comics Club Website",
+        "description": "A quick landing page for a student club I was a part of to showcase comics and host important links. Since our funding was inconsistent and a non tech savy person would have to update the site, I made it entirely frontend acessible.",
+        "repoLink": "https://github.com/huntedherocomics/huntedherocomics.github.io",
+        "repoText": "github/hhc/huntedherocomics.github.io",
+        "liveLink": "https://huntedherocomics.github.io",
+        "liveText": "huntedherocomics.github.io"
+    }
+]
