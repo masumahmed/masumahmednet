@@ -14,7 +14,8 @@ function Main() {
     useEffect(() => {
         const pathname = new URLSearchParams(window.location.search).get('pathname');
         if (pathname) {
-            window.history.replaceState({}, '', pathname);
+            window.history.replaceState({}, '', 'projects');
+            // window.history.replaceState({}, '', pathname);
         }
     }, []);
 
