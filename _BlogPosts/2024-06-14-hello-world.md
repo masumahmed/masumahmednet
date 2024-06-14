@@ -7,15 +7,11 @@
 # description: This is a hello world post.
 ---
 
-# hello world
-
-## this is a subtitle
-
 Hello world this is my new static site bloging system that i made. It's similar to jekyll but it's written in python. I'm using markdown to write my blog posts! Yippie!
 
 this is a paragraph
 
-![image](https://picsum.photos/600/800)
+![image](https://picsum.photos/800/600)
 
 - this is a list
 - this is another list
@@ -27,7 +23,8 @@ this is a paragraph
 *italic*
 <u>underline</u>
 --strikethrough--
-
-``` python
+<pre><code className="code">
+```python
 print("hello world")
 ```
+</code></pre>

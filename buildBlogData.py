@@ -65,6 +65,8 @@ def getAuthor(content):
 # get the md of the blog post
 def getMD(content):
     md = content.split("\n")[9:]
+    # filter out emply "" from content
+    md = list(filter(lambda x: x != "", md))
     return md
 
 def getDescription(content):
