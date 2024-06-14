@@ -31,7 +31,7 @@ function Main() {
         <Route path="/blog/:title" element={<BlogEntry />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/contact" element={<Contact />} />
-        <Route component={<h1 style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>404</h1>} />
+        <Route path="/*" component={<h1 style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>404</h1>} />
     </Routes>
 }
 

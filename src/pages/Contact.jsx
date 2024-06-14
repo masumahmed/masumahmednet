@@ -43,6 +43,7 @@ function Contact() {
                             <br />
                             <input type="submit" value="send"/>
                         </form>
+                        <p style={{ textAlign: 'center', width: 450, margin: '0 auto'}}>powered by <a href="https://www.emailjs.com/" target="__blank">EmailJS</a></p>
                     </>}
                     {sent && <>
                         <h1 style={{textAlign: 'center'}}>Message Sent</h1>
