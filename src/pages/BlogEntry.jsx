@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import Showdown from 'showdown';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -7,12 +8,16 @@ import BlogData from '../data/BlogData.json';
 function BlogEntry() {
     let { title } = useParams();
 
-    let date = '', author = '', text = '';
+    let date = '', author = '', text = '', md = '';
     BlogData.forEach(entry => {
         if (entry.title === title) {
             date = entry.date;
             author = entry.author;
             text = entry.text;
+            md = entry.md;
+            // convert md to html
+            let converter = new Showdown.Converter();
+            // html = converter.makeHtml(md);
         }
     });
 
