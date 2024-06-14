@@ -24,7 +24,5 @@ this is a paragraph
 <u>underline</u>
 --strikethrough--
 <pre><code>
-```python
 print("hello world")
-```
 </code></pre>
