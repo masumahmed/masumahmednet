@@ -33,7 +33,7 @@ function Contact() {
                 <div className="con">
                     {!sent && <>
                         <h1 style={{ textAlign: 'center'}}>Get In Touch</h1>
-                        <p style={{ textAlign: 'center'}}>Please feel free to reach out to me with any questions or comments. I will do my best to respond as soon as possible.</p>
+                        <p style={{ textAlign: 'center', width: 450, margin: '0 auto'}}>Please feel free to reach out to me with any questions or comments. I do my best to respond timely. </p>
                         <form className="contactForm" ref={form} onSubmit={handleSend}>
                             <input type="text" name="user_name" placeholder="name" />
                             <br />
