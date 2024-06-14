@@ -665,8 +665,22 @@ body {
         font-size: 18px;
     }
 
-    .code p {
-        font-size: 16px;
+    pre {
+        margin: 20px;
+    }
+
+    code p {
+        color: #000 !important;
+        font-size: 14px !important;
         font-family: monospace;
+    }
+}
+
+.preview {
+    max-width: 50em;
+    display: flex;
+
+    img {
+        height: 150px;
     }
 }

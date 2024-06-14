@@ -41,6 +41,12 @@ def getTitle(content):
     title = title.strip()
     return title
 
+def getImg(content):
+    img = content.split("\n")[2].replace("img: ", "")
+    img = img.replace("#", "")
+    img = img.strip()
+    return img
+
 # get the date of the blog post
 def getDate(content):
     date = content.split("\n")[4].replace("date: ", "")
@@ -65,7 +71,6 @@ def getAuthor(content):
 # get the md of the blog post
 def getMD(content):
     md = content.split("\n")[9:]
-    # filter out emply "" from content
     md = list(filter(lambda x: x != "", md))
     return md
 
@@ -88,13 +93,12 @@ def main():
     for content in contents:
         data.append({
             "title": getTitle(content),
-            "img": "img.jpg",
+            "img": getImg(content),
             "author": getAuthor(content),
             "date": getDate(content),
             "tags": getTags(content),
             "description": getDescription(content),
             "md": getMD(content),
-            "text": content,
         })
     writeData(data)
 

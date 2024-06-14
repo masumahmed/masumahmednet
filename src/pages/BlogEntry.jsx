@@ -26,6 +26,10 @@ function BlogEntry() {
         const converter = new Showdown.Converter();
         for (let i = 0; i < md.length; i++)
             html += converter.makeHtml(md[i]);
+
+        // filter html for all empty <p> tags
+        html = html.replace('<p><\/p>', '');
+
         setHtmlContent(html);
     }, []);
 
@@ -44,7 +48,7 @@ function BlogEntry() {
                         <h1 style={{ "textAlign": "center" }}>no such blog exists</h1>
                     </>}
                     {date && <>
-                        <h1 style={{ "textAlign": "center" }}>{title}</h1>
+                        <h1 style={{ "textAlign": "left" }}>{title}</h1>
                         <hr />
                         <p><i>{author} - {date} - {description}</i></p>
                         <hr />
