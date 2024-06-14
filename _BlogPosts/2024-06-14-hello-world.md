@@ -1,5 +1,5 @@
 ---
-# title: Hello World 3
+# title: Hello World Test
 # img: https://via.placeholder.com/150
 # author: Masum Ahmed
 # date: 2024-06-14
@@ -10,6 +10,8 @@
 # hello world
 
 ## this is a subtitle
+
+Hello world this is my new static site bloging system that i made. It's similar to jekyll but it's written in python. I'm using markdown to write my blog posts! Yippie!
 
 this is a paragraph
 
