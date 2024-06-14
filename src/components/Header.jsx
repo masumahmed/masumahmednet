@@ -11,9 +11,9 @@ function Header() {
                 <Link to="/projects">
                     <div className="item">Projects</div>
                 </Link>
-                {/* <Link to="/blog">
+                <Link to="/blog">
                     <div className="item">Blog</div>
-                </Link> */}
+                </Link>
                 <Link to="/photos">
                     <div className="item">Photos</div>
                 </Link>

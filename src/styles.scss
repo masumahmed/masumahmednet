@@ -596,3 +596,58 @@ body {
         }
     }
 }
+
+.pills {
+    min-width: 60px;
+    display: inline-flex;
+    border: 2px solid $color_3;
+    border-radius: 20em;
+    padding: 5px 10px;
+    margin: 5px;
+    line-height: 30px;
+    margin-bottom: auto;
+    justify-content: center;
+
+    &:hover {
+        background-color: $color_3;
+        color: $color_1;
+        transition: 1s;
+        cursor: pointer;
+        color: $background-color_5;
+    }
+}
+
+
+.ProjectFilter {
+    display: inline;
+
+    .content .con h4 {
+        display: inline-flex;
+    }
+
+    select {
+        color: black;
+    }
+}
+
+.contactForm {
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+
+    input,
+    textarea {
+        width: 400px;
+        padding: 5px;
+        margin: 5px;
+        font-size: 18px;
+        border: 1px solid #333;
+        resize: none;
+    }
+
+    textarea {
+        height: 300px;
+    }
+}

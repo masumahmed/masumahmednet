@@ -1,5 +1,7 @@
+import Pills from "./Pills";
+
 function GallaryItem({ project }) {
-    const { img, alt, title, description, title2, description2, liveLink, liveText, videoLink, videoText, repoLink, repoText } = project;
+    const { img, alt, title, description, title2, description2, liveLink, liveText, videoLink, videoText, repoLink, repoText, tags } = project;
 
     return <>
         <div class="gallary">
@@ -30,6 +32,17 @@ function GallaryItem({ project }) {
                     <b>Repo Link: </b>
                     <a target="_blank" rel="noopener noreferrer" href={repoLink}>{repoText}</a>
                 </h4>
+                <br />
+                <div className="tags">
+                    <h4>
+                        <b>Tags: </b>
+                        {
+                            project.tags.map((tag, index) => {
+                                return <Pills key={index} text={tag} />
+                            })
+                        }
+                    </h4>
+                </div>
             </div>
         </div>
     </>
