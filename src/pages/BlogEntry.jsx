@@ -9,11 +9,12 @@ import BlogData from '../data/BlogData.json';
 
 function BlogEntry() {
     const [htmlContent, setHtmlContent] = useState('');
-    let { title } = useParams();
+    let { hash } = useParams();
     
-    let date = '', author = '', md="", description = '';
+    let date = '', author = '', md="", description = '', title = '';
     BlogData.forEach(entry => {            
-        if (entry.title === title) {
+        if (entry.hash === hash) {
+            title = entry.title;
             date = entry.date;
             author = entry.author;
             md = entry.md;
