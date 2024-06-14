@@ -13,6 +13,7 @@ import Contact from './pages/Contact'
 function Main() {
     useEffect(() => {
         const pathname = new URLSearchParams(window.location.search).get('pathname');
+        console.log(pathname);
         if (pathname) {
             window.history.replaceState({}, '', pathname);
         }
