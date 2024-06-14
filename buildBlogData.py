@@ -1,5 +1,6 @@
 import os
 import json
+import hashlib
 
 # get all the files in the _BlogPosts directory
 def getFiles():
@@ -63,11 +64,17 @@ def getDescription(content):
     description = description.strip()
     return description
 
-# get a unique from contents
+# get a unique from contents the hash should be the same as the content is the same
+# no time based hash as the content can be the same but the time can be different
 def getHash(content) -> str:
-    h = str(hash(content) & 0x7fffffff)
-    h = hex(int(h))[2:]
-    return h
+    # Create a new sha256 hash object
+    hash_object = hashlib.sha256()
+    # Update the hash object with the content encoded to bytes
+    hash_object.update(content.encode('utf-8'))
+    # Get the hexadecimal representation of the digest
+    hash_hex = hash_object.hexdigest()
+    # Return only the first 12 characters
+    return hash_hex[:12]
 
 # write the data to a json file
 def writeData(data):

@@ -1,6 +1,6 @@
 [
     {
-        "hash": "153faf8f",
+        "hash": "8a22412e08b5",
         "title": "Hello World Test",
         "img": "https://via.placeholder.com/250",
         "author": "Masum Ahmed",
@@ -25,7 +25,7 @@
         ]
     },
     {
-        "hash": "279c1718",
+        "hash": "2a179d56599e",
         "title": "Hello World Test 2",
         "img": "https://via.placeholder.com/250",
         "author": "Masum Ahmed",
@@ -45,9 +45,7 @@
             "<u>underline</u>",
             "--strikethrough--",
             "<pre><code>",
-            "```python",
             "print(\"hello world\")",
-            "```",
             "</code></pre>"
         ]
     }
