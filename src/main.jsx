@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, useHistory } from 'react-router-dom'
 
 import './styles.scss'
 import Home from './pages/Home'
@@ -11,13 +11,18 @@ import BlogEntry from './pages/BlogEntry'
 import Contact from './pages/Contact'
 
 function Main() {
+    const location = useLocation();
+    const history = useHistory();
+  
     useEffect(() => {
-        const pathname = new URLSearchParams(window.location.search).get('pathname');
-        console.log(pathname);
-        if (pathname) {
-            window.history.replaceState({}, '', pathname);
-        }
-    }, []);
+      // Check if the URL contains the redirect query parameter
+      const params = new URLSearchParams(location.search);
+      const redirectPath = params.get('redirect');
+      if (redirectPath) {
+        // Decode the URI component and navigate to the correct path
+        history.replace(decodeURIComponent(redirectPath));
+      }
+    }, [location, history]);
 
     return <React.StrictMode>
         <BrowserRouter basename="">
