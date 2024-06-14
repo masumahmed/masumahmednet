@@ -1,5 +1,5 @@
 ---
-# title: Hello World 2
+# title: Hello World 3
 # img: https://via.placeholder.com/150
 # author: Masum Ahmed
 # date: 2024-06-14
@@ -12,6 +12,8 @@
 ## this is a subtitle
 
 this is a paragraph
+
+![image](https://picsum.photos/600/800)
 
 - this is a list
 - this is another list

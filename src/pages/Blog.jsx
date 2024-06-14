@@ -4,7 +4,6 @@ import BlogPreview from '../components/BlogPreview';
 import BlogData from '../data/BlogData.json';
 
 function Blog() {
-    console.log(BlogData);
     return <>
         <div id="bodyWrapper">
             <Header />

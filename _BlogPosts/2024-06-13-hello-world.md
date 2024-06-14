@@ -13,6 +13,9 @@
 
 this is a paragraph
 
+
+![image](https://picsum.photos/600/800)
+
 - this is a list
 - this is another list
 
