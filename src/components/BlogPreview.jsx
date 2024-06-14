@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function BlogPreview({ props }) {
     let { title, date, author, description, img } = props;
     const titleID = title;
-
-    title = title.replace(/\b\w/g, l => l.toUpperCase());
+    // lowercase titleID
+    // titleID = titleID.toLowerCase();
 
     if (description.length > 200)
         description = description.substring(0, 200) + '...';

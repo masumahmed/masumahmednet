@@ -80,6 +80,13 @@ def getDescription(content):
     description = description.strip()
     return description
 
+# get a unique from contents
+# it should be in hex and postive numbers only
+def getHash(content) -> str:
+    h = str(hash(content) & 0x7fffffff)
+    h = hex(int(h))[2:]
+    return h
+
 # write the data to a json file
 def writeData(data):
     with open("./src/data/BlogData.json", "w") as f:
@@ -92,6 +99,7 @@ def main():
     data = []
     for content in contents:
         data.append({
+            "hash": getHash(content),
             "title": getTitle(content),
             "img": getImg(content),
             "author": getAuthor(content),
