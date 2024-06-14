@@ -11,12 +11,13 @@ function BlogEntry() {
     const [htmlContent, setHtmlContent] = useState('');
     let { title } = useParams();
     
-    let date = '', author = '', md="";
+    let date = '', author = '', md="", description = '';
     BlogData.forEach(entry => {            
         if (entry.title === title) {
             date = entry.date;
             author = entry.author;
             md = entry.md;
+            description = entry.description;
         }
     });
     
@@ -45,7 +46,7 @@ function BlogEntry() {
                     {date && <>
                         <h1 style={{ "textAlign": "center" }}>{title}</h1>
                         <hr />
-                        <p><i>{author} - {date}</i></p>
+                        <p><i>{author} - {date} - {description}</i></p>
                         <hr />
                         <div id="blog">
                             {parse(htmlContent)}
