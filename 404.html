@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="refresh" content="0; url=/" />
-    <title>routing ... </title>
+    <title>redirecting ... </title>
+    <meta name="description" content="redirecting ...">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="theme-color" content="#000000" />
 
     <script type="text/javascript">
-        // Redirect to the index page and keep the path for the SPA router
-        var pathname = window.location.pathname;
-        window.location.replace('/?' + pathname);
+        let pathname = window.location.pathname;
+        window.location.replace(pathname);
     </script>
 
     <style>
