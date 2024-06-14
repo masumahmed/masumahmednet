@@ -1,20 +1,3 @@
-# print all the files names and contents in the _BlogPosts directory
-# and write the data to a json file in this format:
-
-# [
-    # {
-    #     title: "[title]",
-    #     img: "[img.jpg]",
-    #     author: "[author here]",
-    #     date: "[date]",
-    #     md: "[MD here]",
-    #     tags: "[tags here]",
-    #     description: "[description here]"
-    # }
-# ]
-
-# the data for the json file can be found in a YAML front matter format similar to Jekyll
-
 import os
 import json
 
@@ -81,7 +64,6 @@ def getDescription(content):
     return description
 
 # get a unique from contents
-# it should be in hex and postive numbers only
 def getHash(content) -> str:
     h = str(hash(content) & 0x7fffffff)
     h = hex(int(h))[2:]
