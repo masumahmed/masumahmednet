@@ -12,7 +12,7 @@ function BlogPreview({ props }) {
                 <img src={img} />
             </div>
             <div>
-                <h1><Link to={`/blog/${hash}`} >{title}</Link></h1>
+                <h1><Link to={`/blog/${hash}/${titleURL}`} >{title}</Link></h1>
                 <p><i>{author} - {date}</i></p>
                 <p>{description}</p>
             </div>
