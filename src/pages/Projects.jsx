@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import GallaryItem from '../components/GallaryItem';
-import ProjectData from './ProjectsData.json';
+import ProjectData from '../data/ProjectsData.json';
 import ProjectFilter from '../components/ProjectFilter';
 
 function Projects() {

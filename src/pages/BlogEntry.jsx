@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import BlogData from './BlogData.json';
+import BlogData from '../data/BlogData.json';
 
 function BlogEntry() {
     let { title } = useParams();
