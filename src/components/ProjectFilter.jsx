@@ -5,7 +5,8 @@ function ProjectFilter() {
     <div className="content">
         <div className="con" style={{ border: "1px solid rgb(58, 58, 58)", borderTop: "0px Solid" }}>
             <h4>Filter: </h4>
-            <select name="cars" id="cars">
+            <select>
+                <option disabled selected value>select an option</option>
                 <option value="fullstack">Fullstack</option>
                 <option value="">Frontend</option>
                 <option value="ui">UI</option>
