@@ -1,12 +1,12 @@
 import Pills from "./Pills";
 
-function GallaryItem({ project }) {
+function GallaryItem({project}) {
     const { img, alt, title, description, title2, description2, liveLink, liveText, videoLink, videoText, repoLink, repoText, tags } = project;
 
     return <>
-        <div class="gallary">
+        <div className="gallary">
             <img src={img} alt={alt} />
-            <div class="text">
+            <div className="text">
                 <h3><b>{title}</b></h3>
                 <p>{description} </p>
                 <br />
