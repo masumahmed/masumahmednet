@@ -103,10 +103,15 @@ body {
         padding: 15px;
     }
 
+    h3 {
+        display: none;
+    }
+
     #nav {
         display: flex;
         flex-direction: center;
         margin: 0 auto;
+        font-size: 16px;
 
         a {
             color: $color_2;
@@ -116,7 +121,7 @@ body {
         .item {
             text-align: center;
             display: inline-flex;
-            margin: 45px 10px 0 10px;
+            margin: 40px 10px 0 10px;
 
             &:hover {
                 opacity: 0.5;
@@ -530,6 +535,13 @@ body {
     #header {
         h2 {
             display: none;
+        }
+
+        h3 {
+            display: flex;
+            text-align: center;
+            margin: 20px auto;
+            padding: 15px;
         }
     }
 }
