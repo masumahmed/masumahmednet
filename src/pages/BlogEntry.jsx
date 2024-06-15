@@ -43,8 +43,10 @@ function BlogEntry() {
                         <h1 style={{ "textAlign": "center" }}>no such blog exists</h1>
                     </>}
                     {date && <>
+                    {img && <>
                         <img className="previewImage" src={img} />
                         <br />
+                    </>}
                         <br />
                         <h1 style={{ "textAlign": "left" }}>{title}</h1>
                         <hr />

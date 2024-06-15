@@ -29,6 +29,7 @@ def getImg(content):
     img = content.split("\n")[2].replace("img: ", "")
     img = img.replace("#", "")
     img = img.strip()
+    img = img.replace("./", "/")
     return img
 
 # get the date of the blog post
@@ -56,6 +57,8 @@ def getAuthor(content):
 def getMD(content):
     md = content.split("\n")[9:]
     md = list(filter(lambda x: x != "", md))
+    # remove all leading '.' from image links
+    md = list(map(lambda x: x.replace("./", "/"), md))
     return md
 
 def getDescription(content):
@@ -78,7 +81,7 @@ def writeData(data):
 
 # copy _Blob into ./src/_Blob
 def copyBlob():
-    os.system("cp -r ./_BlogPosts/_Blob ./src")
+    os.system("cp -r ./_BlogPosts/_Blob ./public")
 
 # main function
 def main():

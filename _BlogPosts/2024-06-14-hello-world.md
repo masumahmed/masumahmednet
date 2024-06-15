@@ -1,8 +1,8 @@
 ---
-# title: Hello World Test
-# img: https://via.placeholder.com/250
+# title: Hello World Test 0
+# img: ./_Blob/brookly-bridge.jpg
 # author: Masum Ahmed
-# date: 2024-06-14
+# date: 2024-06-12
 # tags: hello, world
 # description: This is a hello world post.
 ---
@@ -11,7 +11,7 @@ Hello world this is my new static site bloging system that i made. It's similar 
 
 this is a paragraph
 
-![image](https://picsum.photos/800/600)
+![image](./_Blob/brookly-bridge.jpg)
 
 - this is a list
 - this is another list
@@ -22,11 +22,7 @@ this is a paragraph
 **bold**
 *italic*
 <u>underline</u>
-
 --strikethrough--
-
 <pre><code>
-
 print("hello world")
-
 </code></pre>
