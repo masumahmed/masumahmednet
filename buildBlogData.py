@@ -65,21 +65,20 @@ def getDescription(content):
     return description
 
 # get a unique from contents the hash should be the same as the content is the same
-# no time based hash as the content can be the same but the time can be different
 def getHash(content) -> str:
-    # Create a new sha256 hash object
     hash_object = hashlib.sha256()
-    # Update the hash object with the content encoded to bytes
     hash_object.update(content.encode('utf-8'))
-    # Get the hexadecimal representation of the digest
     hash_hex = hash_object.hexdigest()
-    # Return only the first 12 characters
     return hash_hex[:12]
 
 # write the data to a json file
 def writeData(data):
     with open("./src/data/BlogData.json", "w") as f:
         json.dump(data, f, indent=4)
+
+# copy _Blob into ./src/_Blob
+def copyBlob():
+    os.system("cp -r ./_BlogPosts/_Blob ./src")
 
 # main function
 def main():
@@ -97,6 +96,8 @@ def main():
             "description": getDescription(content),
             "md": getMD(content),
         })
+    copyBlob()
+    data = sorted(data, key=lambda x: x["date"], reverse=True)
     writeData(data)
 
 if __name__ == "__main__":
