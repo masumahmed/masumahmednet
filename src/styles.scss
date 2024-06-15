@@ -542,22 +542,6 @@ body {
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    .content {
-        .con {
-            width: 940px;
-        }
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .content {
-        .con {
-            width: 720px;
-        }
-    }
-}
-
 @media only screen and (max-width: 760px) {
     .content {
         .con {
@@ -649,12 +633,13 @@ body {
     }
 
     textarea {
-        height: 300px;
+        height: 10em;
     }
 }
 
 .markdown {
     max-width: 50em;
+    color: #c9c9c9;
 
     .previewImage {
         width: 100%;
@@ -690,5 +675,8 @@ body {
         height: 150px;
         width: 150px;
         object-fit: cover;
+        margin: 15px 0px 15px 15px;
+        display: flex;
+        align-content: center;
     }
 }

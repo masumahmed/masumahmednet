@@ -39,8 +39,12 @@ function BlogEntry() {
             <div className="content">
                 <div className="con border markdown" style={{ "borderBottom": "1px solid #3a3a3a" }}>
                     {!date && <>
-                        <h1 style={{ "textAlign": "center" }}>404</h1>
-                        <h1 style={{ "textAlign": "center" }}>no such blog exists</h1>
+                        <h1 style={{ "textAlign": "center" }}>error 404 - no such blog exists</h1>
+                        {
+                            setTimeout(() => {
+                                window.location.href = '/blog';
+                            }, 5000)
+                        }
                     </>}
                     {date && <>
                     {img && <>
@@ -50,11 +54,12 @@ function BlogEntry() {
                         <br />
                         <h1 style={{ "textAlign": "left" }}>{title}</h1>
                         <hr />
-                        <p><i>{author} - {date} - {description}</i></p>
+                        <p><i>{author} - {date} </i></p>
                         <hr />
                         <div id="blog">
                             {parse(htmlContent)}
                         </div>
+                        <br />
                     </>}
                 </div>
             </div>
