@@ -37,7 +37,7 @@ function BlogEntry() {
         <div id="bodyWrapper">
             <Header />
             <div className="content">
-                <div className="con border markdown" style={{ "borderBottom": "1px solid #3a3a3a" }}>
+                <div className="con border markdown">
                     {!date && <>
                         <h1 style={{ "textAlign": "center" }}>error 404 - no such blog exists</h1>
                         {

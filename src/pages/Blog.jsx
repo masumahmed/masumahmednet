@@ -11,7 +11,6 @@ function Blog() {
                 {BlogData.map(entry => {
                     return <BlogPreview key={entry.title} props={entry} />
                 })}
-                <br />
             </div>
         </div>
         <Footer />
