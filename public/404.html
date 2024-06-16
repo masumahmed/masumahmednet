@@ -11,14 +11,13 @@
     <meta name="theme-color" content="#000000" />
 
     <script type="text/javascript">
-        // Extract the full path including the query and hash
-        var fullPath = window.location.pathname + window.location.search + window.location.hash;
-        // Redirect to the root with the full path as a query parameter
+        let fullPath = window.location.pathname + window.location.search + window.location.hash;
         window.location.replace('/?redirect=' + encodeURIComponent(fullPath));
     </script>
 
     <style>
         body {
+            /* black background to avoid flash banging the user */
             background-color: #000000;
         }
     </style>

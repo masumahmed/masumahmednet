@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom';
-import Showdown from 'showdown';
 import { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
-
+import Showdown from 'showdown';
+import showdownHighlight from "showdown-highlight";
+import 'highlight.js/styles/atom-one-dark.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BlogData from '../data/BlogData.json';
@@ -11,25 +12,41 @@ function BlogEntry() {
     const [htmlContent, setHtmlContent] = useState('');
     const { hash } = useParams();
     
-    let title = '', date = '', author = '', md="", description = '', img = '';
+    let title = '', date = '', author = '', md="", img = '', tags = '';
     BlogData.forEach(entry => {            
         if (entry.hash === hash) {
             title = entry.title;
             date = entry.date;
             author = entry.author;
             md = entry.md;
-            description = entry.description;
             img = entry.img;
+            tags = entry.tags;
         }
     });
+
+    // put # in front of each tag
+    tags = tags.replace(/ /g, '');
+    tags = tags.split(',').map(tag => {
+        return '#' + tag;
+    }).join(', ');
     
     useEffect(() => {
         let html = '';
-        const converter = new Showdown.Converter();
-        for (let i = 0; i < md.length; i++)
-            html += converter.makeHtml(md[i]);
-        html = html.replace('<p><\/p>', '');
-
+        const converter = new Showdown.Converter({
+            extensions: [
+                showdownHighlight({ pre: true, auto_detection: true })
+            ],
+            ghCodeBlocks: true,
+            simpleLineBreaks: true,
+            openLinksInNewWindow: true,
+        });
+        
+        // turn md into a str from a json
+        let tmp = '';
+        for (let i = 0; i < md.length; i++) 
+            tmp += md[i] + '\n';
+        
+        html = converter.makeHtml(tmp);
         setHtmlContent(html);
     }, []);
 
@@ -54,7 +71,7 @@ function BlogEntry() {
                         <br />
                         <h1 style={{ "textAlign": "left" }}>{title}</h1>
                         <hr />
-                        <p><i>{author} - {date} </i></p>
+                        <p><i>{author} - {date} - {tags}</i></p>
                         <hr />
                         <div id="blog">
                             {parse(htmlContent)}

@@ -12,6 +12,9 @@ function BlogPreview({ props }) {
         return '#' + tag;
     }).join(', ');
 
+    if (img === "")
+        img = "/public/assets/img/android-icon-48x48.png";
+
     return <>
         <div className="con border preview" style={{ "borderBottom": "1px solid #3a3a3a" }}>
             <div>

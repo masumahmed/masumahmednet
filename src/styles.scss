@@ -671,12 +671,20 @@ body {
 
     pre {
         margin: 20px;
+        background-color: $background-color_4;
+
+        code {
+            background-color: $background-color_4;
+        }
     }
 
-    code p {
-        color: #000 !important;
+    p {
         font-size: 14px !important;
         font-family: monospace;
+    }
+
+    code {
+        font-size: 14px !important;
     }
 }
 
