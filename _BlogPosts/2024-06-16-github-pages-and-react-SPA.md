@@ -1,5 +1,5 @@
 ---
-# title: URL Routing in React SPA with Gitub Pages
+# title: URL Routing in React SPA with Github Pages
 # img: 
 # author: Masum Ahmed
 # date: 2024-06-16

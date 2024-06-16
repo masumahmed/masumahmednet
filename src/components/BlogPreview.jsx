@@ -13,7 +13,7 @@ function BlogPreview({ props }) {
     }).join(', ');
 
     if (img === "")
-        img = "/assets/img/android-icon-48x48.png";
+        img = "/assets/img/code-circle.svg";
 
     return <>
         <div className="con border preview" style={{ "borderBottom": "1px solid #3a3a3a" }}>
