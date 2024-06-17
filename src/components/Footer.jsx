@@ -15,7 +15,6 @@ function Footer() {
                     <li><a href="https://linkedin.com/in/masum-ahmed" target="__blank">LinkedIn</a></li>
                     <li><a href="/resume.pdf" target="__blank">Résumé</a></li>
                     <li><Link to="/contact">Contact</Link></li>
-
                 </div>
                 <div className="section">
                     <li>Made with <span role="img" aria-label="purple heart emoji">💜</span> and React by Masum Ahmed</li>
