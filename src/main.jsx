@@ -32,7 +32,7 @@ function Main() {
         <Route path="/blog/:hash" element={<BlogEntry />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<meta httpEquiv='refresh' content='0; URL=/resume.pdf'/> } />
+        <Route path="/resume" element={<meta httpEquiv='refresh' content='0; URL=https://docs.google.com/viewerng/viewer?url=http://masumahmed.net/resume.pdf'/> } />
         <Route path="/*" component={<h1 style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>404</h1>} />
     </Routes>
 }
