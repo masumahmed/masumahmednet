@@ -11,8 +11,8 @@ function Projects() {
     const [filter, setFilter] = useState("*");
         
         return <>
+        <Modal dependency={{filter}}/>
         <div id="bodyWrapper">
-            <Modal />
             <Header />
             <ProjectFilter filter={{filter, setFilter}} />
             <div id="project-wrapper">

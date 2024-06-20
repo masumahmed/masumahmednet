@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Modal() {
+function Modal({dependency}) {
     const [image, setImage] = useState("");
     const [alt, setAlt] = useState("");
 
@@ -13,7 +13,7 @@ function Modal() {
                 display();
             });
         }
-    }, []);
+    }, [dependency]);
 
     const display = () => {
         let modal = document.getElementById("modal");
