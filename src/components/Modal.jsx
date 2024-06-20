@@ -21,21 +21,25 @@ function Modal({dependency}) {
 
         modal.classList.remove("invisible");
         modalContainer.classList.remove("invisible");
+        document.body.style.overflow = "hidden";
 
         modalContainer.addEventListener("click", function () {
             modal.classList.add("invisible");
             modalContainer.classList.add("invisible");
+            document.body.style.overflow = "auto";
         });
 
         modal.addEventListener("click", function () {
             modal.classList.add("invisible");
             modalContainer.classList.add("invisible");
+            document.body.style.overflow = "auto";
         });
 
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
                 modal.classList.add("invisible");
                 modalContainer.classList.add("invisible");
+                document.body.style.overflow = "auto";
             }
         });
     }
