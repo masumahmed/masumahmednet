@@ -6,6 +6,7 @@ import showdownHighlight from "showdown-highlight";
 import 'highlight.js/styles/atom-one-dark.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Modal from '../components/Modal';
 import BlogData from '../data/BlogData.json';
 
 function BlogEntry() {
@@ -52,6 +53,7 @@ function BlogEntry() {
 
     return <>
         <div id="bodyWrapper">
+            <Modal />
             <Header />
             <div className="content">
                 <div className="con border markdown">

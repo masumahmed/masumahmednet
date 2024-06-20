@@ -33,7 +33,7 @@ function Modal() {
         });
 
         document.addEventListener("keydown", function (event) {
-            if (event.key === "escape") {
+            if (event.key === "Escape") {
                 modal.classList.add("invisible");
                 modalContainer.classList.add("invisible");
             }

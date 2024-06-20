@@ -5,12 +5,14 @@ import Header from '../components/Header';
 import GallaryItem from '../components/GallaryItem';
 import ProjectData from '../data/ProjectsData.json';
 import ProjectFilter from '../components/ProjectFilter';
+import Modal from '../components/Modal';
 
 function Projects() {
     const [filter, setFilter] = useState("*");
         
         return <>
         <div id="bodyWrapper">
+            <Modal />
             <Header />
             <ProjectFilter filter={{filter, setFilter}} />
             <div id="project-wrapper">

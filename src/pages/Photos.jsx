@@ -1,8 +1,10 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Modal from '../components/Modal';
 
 function Photos() {
     return <>
+        <Modal />
         <div id="bodyWrapper">
             <Header />
             <div className="content">
