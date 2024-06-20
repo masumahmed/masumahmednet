@@ -8,6 +8,7 @@ import Blog from './pages/Blog'
 import Photos from './pages/Photos'
 import BlogEntry from './pages/BlogEntry'
 import Contact from './pages/Contact'
+import Modal from './components/Modal'
 import './styles.scss'
 
 function Main() {
@@ -42,6 +43,7 @@ export default Main;
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <Router basename="">
+            <Modal />
             <Main />
         </Router>
     </React.StrictMode>

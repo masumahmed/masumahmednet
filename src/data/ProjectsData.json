@@ -7,7 +7,7 @@
         "title2": "Example MLK.txt",
         "description2": "The system is able to store any 20Kb text file within it's volume. In the example screenshot I used MLK's famous I had a dream speech. In the FAT (left) you can see the file being allocated. In the volume (right) you can see a subsection of the file's content being stored using the index allocation method for file management.",
         "repoLink": "https://github.com/masumahmed/filesystem",
-        "repoText": "github/masumahmed/filesystem",
+        "repoText": "github.com/masumahmed/filesystem",
         "tags": [
             "OS",
             "C++",
@@ -22,7 +22,7 @@
         "videoLink": "https://youtu.be/iMSPQ5wabFM",
         "videoText": "https://youtu.be/SxkksvAsUzM",
         "repoLink": "https://github.com/masumahmed/link-locker",
-        "repoText": "github/masumahmed/link-locker",
+        "repoText": "github.com/masumahmed/link-locker",
         "tags": [
             "Fullstack",
             "Postgres",
@@ -49,7 +49,7 @@
         "title": "Hunted Hero Comics Club Website",
         "description": "A quick landing page for a student club I was a part of to showcase comics and host important links. Since our funding was inconsistent and a non tech savy person would have to update the site, I made it entirely frontend acessible.",
         "repoLink": "https://github.com/huntedherocomics/huntedherocomics.github.io",
-        "repoText": "github/hhc/huntedherocomics.github.io",
+        "repoText": "github.com/... /huntedherocomics.github.io",
         "liveLink": "https://huntedherocomics.github.io",
         "liveText": "huntedherocomics.github.io",
         "tags": [

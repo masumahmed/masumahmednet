@@ -1,20 +1,21 @@
-import Pills from "./Pills";
+function ProjectFilter({filter}) {
+    const handleFilter = (event) => {
+        filter.setFilter(event.target.value);
+    }
 
-function ProjectFilter() {
     return <div className="ProjectFilter">
     <div className="content">
         <div className="con" style={{ border: "1px solid rgb(58, 58, 58)", borderTop: "0px Solid" }}>
             <h4>Filter: </h4>
-            <select>
-                <option disabled selected value>select an option</option>
-                <option value="fullstack">Fullstack</option>
-                <option value="">Frontend</option>
-                <option value="ui">UI</option>
-                <option value="os">OS</option>
-                <option value="c++">C++</option>
-                <option value="fileSystem">File System</option>
+            <select className="selected" onChange={handleFilter}>
+                <option selected value="*">All</option>
+                <option value="Fullstack">Fullstack</option>
+                <option value="Frontend">Frontend</option>
+                <option value="UI">UI</option>
+                <option value="OS">OS</option>
+                <option value="C++">C++</option>
+                <option value="File Systems">File System</option>
             </select>
-            <h4 className="selectedFilters"></h4>
         </div>
     </div>
     </div>
