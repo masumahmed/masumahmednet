@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
 import Showdown from 'showdown';
@@ -12,6 +12,7 @@ import BlogData from '../data/BlogData.json';
 function BlogEntry() {
     const [htmlContent, setHtmlContent] = useState('');
     const { hash } = useParams();
+    const { pathname } = useLocation();
     
     let title = '', date = '', author = '', md="", img = '', tags = '';
     BlogData.forEach(entry => {            
@@ -49,7 +50,9 @@ function BlogEntry() {
         
         html = converter.makeHtml(tmp);
         setHtmlContent(html);
-    }, []);
+        window.scrollTo(0, 0);
+
+    }, [pathname]);
 
     return <>
         <div id="bodyWrapper">

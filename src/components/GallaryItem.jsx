@@ -1,7 +1,8 @@
 import Pills from "./Pills";
+import { Link } from 'react-router-dom';
 
 function GallaryItem({project}) {
-    const { img, alt, title, description, title2, description2, liveLink, liveText, videoLink, videoText, repoLink, repoText, tags } = project;
+    const { img, alt, title, description, title2, description2, liveLink, liveText, videoLink, videoText, repoLink, repoText, blogtitle, blogLink, tags } = project;
 
     return <>
         <div className="gallary">
@@ -16,9 +17,16 @@ function GallaryItem({project}) {
                         <p>{description2}</p>
                     </>
                 }
+                {
+                    blogtitle &&
+                    <h4>
+                        <b>Blog: </b>
+                        <Link to={blogLink} alt="blog link">{blogtitle}</Link>
+                    </h4>
+                }
                 {liveLink &&
                     <h4>
-                        <b>Live Link: </b>
+                        <b>Demo: </b>
                         <a target="_blank" rel="noopener noreferrer" href={liveLink}>{liveText}</a>
                     </h4>
                 }
@@ -29,7 +37,7 @@ function GallaryItem({project}) {
                     </h4>
                 }
                 <h4>
-                    <b>Repo Link: </b>
+                    <b>Repo: </b>
                     <a target="_blank" rel="noopener noreferrer" href={repoLink}>{repoText}</a>
                 </h4>
                 <br />

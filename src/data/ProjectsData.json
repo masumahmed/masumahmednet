@@ -52,6 +52,8 @@
         "repoText": "github.com/... /huntedherocomics.github.io",
         "liveLink": "https://huntedherocomics.github.io",
         "liveText": "huntedherocomics.github.io",
+        "blogtitle": "URL Routing in React SPA with Github Pages",
+        "blogLink": "/blog/2de87e27fa7d/",
         "tags": [
             "Frontend",
             "UI"
