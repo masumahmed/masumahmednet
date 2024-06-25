@@ -371,6 +371,7 @@ body {
             -o-object-fit: cover;
             object-fit: cover;
             border: 2px solid #333;
+            cursor: pointer;
 
             &:hover {
                 filter: brightness(0.5);
@@ -668,6 +669,7 @@ body {
     img {
         max-width: 100%;
         height: auto;
+        cursor: pointer;
     }
 
     li {
