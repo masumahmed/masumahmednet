@@ -16,10 +16,11 @@ function BlogPreview({ props }) {
         img = "/assets/img/code-circle.svg";
 
     return <>
-        <Link to={`/blog/${hash}/${titleURL}`} >
         <div className="con border preview" style={{ "borderBottom": "1px solid #3a3a3a" }}>
             <div>
+                <Link to={`/blog/${hash}/${titleURL}`} >
                     <img src={img} />
+                </Link>
             </div>
             <div>
                 <h1><Link to={`/blog/${hash}/${titleURL}`} >{title}</Link></h1>
@@ -27,7 +28,6 @@ function BlogPreview({ props }) {
                 <p>{date} • {tags}</p>
             </div>
         </div>
-        </Link>
     </>
 }
 
